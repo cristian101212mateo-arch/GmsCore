@@ -74,7 +74,7 @@ def execResult(... args) {
     providers.exec { commandLine args }.standardOutput.asText.get()
 }
 
-def ignoreGit = providers.environmentVariable('GRADLE_MICROG_VERSION_WITHOUT_GIT').getOrElse('0') == '1'
+def ignoreGit = true
 def gmsVersion = "25.24.32"
 def gmsVersionCode = Integer.parseInt(gmsVersion.replaceAll('\\.', ''))
 def vendingVersion = "40.2.26"
